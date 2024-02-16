@@ -1,7 +1,8 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: League Spartan;
-
-  margin: 0;
 }
 .main-container {
   max-width: 1430px;
@@ -9,7 +10,6 @@ body {
 .main {
   display: flex;
   justify-content: space-between;
-
   gap: 55px;
   background: #f8f8f8;
   padding-left: 135px;
@@ -28,6 +28,7 @@ body {
   font-weight: 100;
   line-height: 230px;
   text-align: left;
+  max-width: 586px;
   margin: 0;
   margin-bottom: 43px;
 }
@@ -54,7 +55,6 @@ body {
   font-size: 32px;
   font-weight: 100;
   line-height: 29px;
-  letter-spacing: 0%;
   text-align: left;
   background: #161515;
 }
@@ -65,7 +65,6 @@ body {
   font-size: 32px;
   font-weight: 100;
   line-height: 186%;
-
   text-align: center;
   box-shadow: 0px 0px 28px 0px rgba(214, 214, 214, 0.25);
   background: rgb(255, 255, 255);
@@ -74,7 +73,7 @@ body {
 .image {
   max-width: 408px;
   width: 100%;
-  height: auto;
+  margin: auto;
   margin-right: 230px;
   margin-bottom: 219px;
 }
@@ -86,12 +85,7 @@ body {
   max-width: 1430px;
   width: 100%;
   text-align: center;
-  justify-content: center;
   align-items: center;
-}
-.text {
-  max-width: 532px;
-  margin-left: 464px;
 }
 .popular {
   color: rgb(0, 0, 0);
@@ -110,13 +104,16 @@ body {
 }
 .primary-watch {
   max-width: 417px;
-  min-height: 630px;
+  width: 100%;
+  max-height: 630px;
   background: #f8f8f8;
   margin-bottom: 67px;
-  margin-left: 525px;
+  margin: auto;
 }
 .primary-image {
-  margin: 110px 60px;
+  margin: auto;
+  width: 100%;
+  transition: 0.2s all ease-in-out;
 }
 .primary-image:hover {
   transform: translatex(-2px) scale(1.1);
@@ -136,20 +133,22 @@ body {
   font-size: 32px;
   font-weight: 100;
   line-height: 155%;
-  margin-left: 464px;
+  margin: auto;
   max-width: 532px;
   margin-bottom: 85px;
 }
 .secondary-watch {
-  text-align: center;
+  margin: auto;
   max-width: 496px;
+  width: 100%;
   max-height: 630px;
   background: #f8f8f8;
   margin-bottom: 67px;
-  margin-left: 465px;
 }
 .secondary-image {
   margin: 0px;
+  width: 100%;
+  transition: 0.2s all ease-in-out;
 }
 .secondary-image:hover {
   transform: translatex(-2px) scale(1.1);
@@ -168,6 +167,8 @@ body {
   font-size: 32px;
   font-weight: 100;
   line-height: 155%;
+  max-width: 510px;
+  margin: auto;
   margin-bottom: 59px;
 }
 span {
@@ -195,16 +196,73 @@ span::before {
   font-size: 24px;
   font-weight: 100;
   line-height: 170%;
+  max-width: 515px;
+  margin: auto;
   margin-bottom: 142px;
 }
 .link {
   color: #bb8b5d;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1220px) {
+  .info {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+  .main-container {
+    max-width: 1430px;
+    margin: auto;
+  }
+  .image {
+    max-width: 408px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 219px;
+  }
+  .main {
+    display: grid;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 0px;
+  }
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    margin-bottom: 246px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
 }
+
 @media screen and (max-width: 768px) {
+  .main {
+    display: grid;
+    justify-content: center;
+    background: #f8f8f8;
+  }
 }
 @media screen and (max-width: 592px) {
+  .title {
+    color: rgb(39, 39, 39);
+    font-family: League Spartan;
+    font-size: 150px;
+    font-weight: 100;
+    line-height: 230px;
+    text-align: center;
+    max-width: auto;
+    margin: 0;
+    margin-bottom: 43px;
+  }
+}
+@media screen and (max-width: 462px) {
+  * {
+    word-break: break-all;
+  }
 }
 @media screen and (max-width: 280px) {
 }
